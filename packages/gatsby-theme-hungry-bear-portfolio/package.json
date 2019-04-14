@@ -1,0 +1,27 @@
+{
+  "name": "gatsby-theme-hungry-bear-portfolio",
+  "version": "0.0.1",
+  "description": "A Gatsby potfolio theme",
+  "main": "index.js",
+  "author": "Hungry Bear Studio <roar@hungrybearstudio.com> (hungrybearstudio.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "gatsby": "^2.3.22",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "tslint": "^5.15.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.0.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.3.22",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "gatsby-plugin-page-creator": "^2.0.12",
+    "gatsby-plugin-typescript": "^2.0.12",
+    "typescript": "^3.4.3"
+  }
+}
