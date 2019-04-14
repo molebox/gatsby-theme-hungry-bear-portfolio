@@ -8,6 +8,14 @@
           "options": {
             "plugins": []
           }
+        },
+        {
+          "name": "@emotion/babel-preset-css-prop",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
+            "plugins": []
+          }
         }
       ],
       "options": {
@@ -21,6 +29,14 @@
         {
           "name": "@babel/preset-typescript",
           "options": {
+            "plugins": []
+          }
+        },
+        {
+          "name": "@emotion/babel-preset-css-prop",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         }
@@ -38,6 +54,14 @@
           "options": {
             "plugins": []
           }
+        },
+        {
+          "name": "@emotion/babel-preset-css-prop",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
+            "plugins": []
+          }
         }
       ],
       "options": {
@@ -51,6 +75,14 @@
         {
           "name": "@babel/preset-typescript",
           "options": {
+            "plugins": []
+          }
+        },
+        {
+          "name": "@emotion/babel-preset-css-prop",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         }

@@ -17,9 +17,14 @@
   "peerDependencies": {
     "gatsby": "^2.3.22",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-page-creator": "^2.0.12",
     "gatsby-plugin-typescript": "^2.0.12",
     "typescript": "^3.4.3"

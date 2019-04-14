@@ -1,3 +1,8 @@
 import * as React from 'react';
+import {Container, Title} from '../components/layoutStyles/LayoutStyles';
 
-export default () => <h1>Hello from the gatsby theme!!!</h1>;
+export default () => (
+    <Container>
+        <Title>Hello from the gatsby theme! Im styled!</Title>
+    </Container>
+);
