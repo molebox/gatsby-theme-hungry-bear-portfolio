@@ -8,6 +8,12 @@ module.exports = {
         path: path.join(__dirname, "src", "pages"),
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: path.join(__dirname, "src", "pages"),
+      },
+    },
     "gatsby-plugin-typescript",
     "gatsby-plugin-tslint",
     "gatsby-plugin-emotion"
