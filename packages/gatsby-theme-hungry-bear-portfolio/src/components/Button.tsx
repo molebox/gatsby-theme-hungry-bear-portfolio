@@ -44,16 +44,17 @@ export const button = css`
   display: inline-block;
   text-decoration: none;
   position: relative;
-  margin-top: 40px;
-  width: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
 
   & .bottom {
     position: absolute;
-    left: 7px;
+    left: 4px;
     top: 7px;
     width: 100%;
     height: 100%;
-    background-color: ${colors.accent};
+    background-color: #2acdc1;
     display: block;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
@@ -63,10 +64,10 @@ export const button = css`
 
   & .top {
     position: relative;
-    left: 0;
+    left: 10px;
     top: 0;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     padding: 24px 34px 22px 34px;
     border: 2px solid ${colors.primary};
   }
@@ -74,7 +75,7 @@ export const button = css`
   & .top .label {
     font-family: sans-serif;
     font-weight: 600;
-    color: #04049d;
+    color: ${colors.primary};
     font-size: 12px;
     line-height: 110%;
     letter-spacing: 2px;
@@ -86,7 +87,7 @@ export const button = css`
     transition: all 0.15s ease-out;
   }
 
-  &:active {
+  &:hover {
     ${buttonDark}
   }
 
@@ -97,7 +98,8 @@ export const button = css`
   }
 
   &:hover .top .label {
-    color: ${colors.secondary};
+    // color: #2acdc1;
+    color: ${colors.accent};
     cursor: pointer;
   }
 
@@ -131,15 +133,21 @@ export const buttonBorder = css`
   transition: all 0.25s ease-out;
 `;
 
-export const Button = () => (
-    <div css={button}>
+interface ButtonProps {
+  text: string;
+}
+
+export const Button = ({text}: ButtonProps) => (
+  <div style={{display: 'flex'}}>
+    <a css={button}>
         <div className="bottom"/>
         <div className="top">
-            <div className="label">THIS IS A BUTTON</div>
+            <div className="label">{text}</div>
             <div css={[buttonBorder, buttonBorderLeft]}/>
             <div css={[buttonBorder, buttonBorderTop]}/>
             <div css={[buttonBorder, buttonBorderRight]}/>
             <div css={[buttonBorder, buttonBorderBottom]}/>
         </div>
-    </div>
+    </a>
+  </div>
 );

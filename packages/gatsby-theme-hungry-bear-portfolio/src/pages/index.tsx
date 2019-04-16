@@ -6,8 +6,6 @@ import {Button} from '../components/Button';
 export default () => (
     <Container>
         <Title>Hello from the gatsby theme! Im styled!</Title>
-        <div style={{width: '500px'}}>
-            <Button/>
-        </div>
+            <Button text="Im a button"/>
     </Container>
 );
