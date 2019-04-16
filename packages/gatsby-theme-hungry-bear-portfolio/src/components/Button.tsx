@@ -1,66 +1,77 @@
 import * as React from 'react';
-import styled from '@emotion/styled';
 import {css} from '@emotion/core';
+import colors from '../extendable/colors';
 
-// wraps the whole button component
-const buttonWrapper = css`
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    margin-top: 40px;
+export const buttonBorderLeft = css`
+  left: -2px;
+  bottom: -2px;
+  width: 2px;
+  height: 0;
+`;
+
+export const buttonBorderRight = css`
+  right: -2px;
+  top: -2px;
+  width: 2px;
+  height: 0;
+`;
+
+export const buttonBorderTop = css`
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: 2px;
+`;
+
+export const buttonBorderBottom = css`
+  right: -2px;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+`;
+
+export const buttonDark = css`
+  & .top {
+    border: 2px solid ${colors.accent};
+  }
+
+  & .top .label {
+    color: ${colors.secondary};
+  }
+`;
+
+export const button = css`
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+
+  & .bottom {
+    position: absolute;
+    left: 7px;
+    top: 7px;
     width: 100%;
+    height: 100%;
+    background-color: ${colors.accent};
+    display: block;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+  }
 
-    &:hover {
-        left: 0;
-        top: 0;
-        background-color: #f3f3f3;
-
-        height: calc(100% + 2px);
-        width: calc(100% + 2px);
-    }
-`
-
-// the top section of the button with a solid border
-const buttonTop = css`
+  & .top {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     padding: 24px 34px 22px 34px;
-    border: 2px solid #04049d;
+    border: 2px solid ${colors.primary};
+  }
 
-    
-    &:hover {
-        color: #2acdc1;
-        height: calc(100% + 2px);
-        width: calc(100% + 2px);
-    }
-`
-
-// the bottom section of the button that hangs below the main border
-const buttonBottom = css`
-    position: absolute;
-    left: 7px;
-    top: 7px;
-    width: 100%;
-    height: 100%;
-    background-color: #2acdc1;
-    display: block;
-    -webkit-transition: all .15s ease-out;
-    -moz-transition: all .15s ease-out;
-    -o-transition: all .15s ease-out;
-    transition: all .15s ease-out;
-
-    &:hover {
-        left: 0;
-        top: 0;
-        background-color: #f3f3f3;
-    }
-`
-
-// the buttion label
-const buttonLabel = css`
+  & .top .label {
     font-family: sans-serif;
     font-weight: 600;
     color: #04049d;
@@ -69,82 +80,66 @@ const buttonLabel = css`
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
-    -webkit-transition: all .15s ease-out;
-    -moz-transition: all .15s ease-out;
-    -o-transition: all .15s ease-out;
-    transition: all .15s ease-out;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+  }
 
-    &:hover {
-        color: #2acdc1;
-    }
-`
+  &:active {
+    ${buttonDark}
+  }
 
-const buttonBorder = css`
-    position: absolute;
-    background-color: #2acdc1;
-    -webkit-transition: all .25s ease-out;
-    -moz-transition: all .25s ease-out;
-    -o-transition: all .25s ease-out;
-    transition: all .25s ease-out;
-`
+  &:hover .bottom {
+    left: 0;
+    top: 0;
+    background-color: #f3f3f3;
+  }
 
-const buttonBorderLeft = css`   
-    ${buttonBorder}
-    left: -2px;
-    bottom: -2px;
-    width: 2px;
-    height: 0;
+  &:hover .top .label {
+    color: ${colors.secondary};
+    cursor: pointer;
+  }
 
-    &:hover {
-        height: calc(100% + 2px);
-    }
-`
+  &:hover
+    .top
+    .${buttonBorderLeft},
+    &:hover
+    .top
+    .${buttonBorderRight} {
+    height: calc(100% + 2px);
+    cursor: pointer;
+  }
 
-const buttonBorderTop = css`
-    ${buttonBorder}
-    left: -2px;
-    top: -2px;
-    width: 0;
-    height: 2px;
+  &:hover
+    .top
+    .${buttonBorderTop},
+    &:hover
+    .top
+    .${buttonBorderBottom} {
+    width: calc(100% + 2px);
+    cursor: pointer;
+  }
+`;
 
-    &:hover {
-        width: calc(100% + 2px);
-    }
-`
+export const buttonBorder = css`
+  position: absolute;
+  background-color: #2acdc1;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+`;
 
-const buttonBorderRight = css`
-    ${buttonBorder}
-    right: -2px;
-    top: -2px;
-    width: 2px;
-    height: 0;
-
-    &:hover {
-        height: calc(100% + 2px);
-    }
-`
-
-const buttonBorderBottom = css`
-    ${buttonBorder}
-    right: -2px;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-
-    &:hover {
-        width: calc(100% + 2px);
-    }
-`
-
-export default () => (
-    <a css={buttonWrapper}>
-        <div css={buttonBottom}/>
-        <div css={buttonTop}>
-            <div css={buttonLabel}>THIS IS A BUTTON</div>
-                <div css={buttonBorderLeft}></div>
-                <div css={buttonBorderTop}></div>
-                <div css={buttonBorderRight}></div>
-        		<div css={buttonBorderBottom}></div>
+export const Button = () => (
+    <div css={button}>
+        <div className="bottom"/>
+        <div className="top">
+            <div className="label">THIS IS A BUTTON</div>
+            <div css={[buttonBorder, buttonBorderLeft]}/>
+            <div css={[buttonBorder, buttonBorderTop]}/>
+            <div css={[buttonBorder, buttonBorderRight]}/>
+            <div css={[buttonBorder, buttonBorderBottom]}/>
         </div>
-    </a>
-)
+    </div>
+);
