@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { Container } from '../components/Container';
+import { Box } from '../components/Container';
 import { Title } from '../components/Title';
 import {Button} from '../components/Button';
 
 export default () => (
-    <Container>
-        <Title>Hello from the gatsby theme! Im styled!</Title>
-            <Button text="Im a button"/>
-    </Container>
+    <div>
+        <Box>
+            <Title>Hello from the gatsby theme! Im styled!</Title>
+        </Box>
+        <Button onClick={() => console.log('HIT')} text="Im a button"/>
+    </div>
 );

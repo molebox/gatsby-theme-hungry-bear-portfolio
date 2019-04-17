@@ -36,7 +36,7 @@ export const buttonDark = css`
   }
 
   & .top .label {
-    color: ${colors.secondary};
+    color: ${colors.accent};
   }
 `;
 
@@ -45,7 +45,6 @@ export const button = css`
   text-decoration: none;
   position: relative;
   border: none;
-  cursor: pointer;
   outline: none;
 
   & .bottom {
@@ -66,8 +65,6 @@ export const button = css`
     position: relative;
     left: 10px;
     top: 0;
-    // width: 100%;
-    // height: 100%;
     padding: 24px 34px 22px 34px;
     border: 2px solid ${colors.primary};
   }
@@ -87,7 +84,7 @@ export const button = css`
     transition: all 0.15s ease-out;
   }
 
-  &:hover {
+  &:active {
     ${buttonDark}
   }
 
@@ -98,8 +95,7 @@ export const button = css`
   }
 
   &:hover .top .label {
-    // color: #2acdc1;
-    color: ${colors.accent};
+    color: ${colors.primary};
     cursor: pointer;
   }
 
@@ -126,20 +122,21 @@ export const button = css`
 
 export const buttonBorder = css`
   position: absolute;
-  background-color: #2acdc1;
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
+  background-color: ${colors.primary};
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
 `;
 
 interface ButtonProps {
   text: string;
+  onClick: () => void;
 }
 
-export const Button = ({text}: ButtonProps) => (
-  <div style={{display: 'flex'}}>
-    <a css={button}>
+export const Button = ({text, onClick}: ButtonProps) => (
+  <div style={{display: 'flex', margin: '1.5rem'}}>
+    <a onClick={onClick} css={button}>
         <div className="bottom"/>
         <div className="top">
             <div className="label">{text}</div>
