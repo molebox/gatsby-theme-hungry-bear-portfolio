@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body { /* ADDED */
+  margin: 0;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.2fr;
+    grid-template-rows: 0.4fr 1fr 1fr 0.4fr;
+    grid-template-areas: 
+    "headerNavbar headerNavbar headerNavbar" 
+    ". hero ." 
+    ". content ." 
+    ". footer .";
+
+    height: 100vh;
+    grid-gap: 20px;
+  }
+  
+  .headerNavbar { 
+      grid-area: headerNavbar; 
+
+    }
+  
+  .hero { 
+    grid-area: hero; 
+
+  }
+  
+  .content { 
+    grid-area: content; 
+
+  }
+  
+  .footer { 
+    grid-area: footer; 
+
+  }

@@ -53,7 +53,7 @@ export const button = css`
     top: 7px;
     width: 100%;
     height: 100%;
-    background-color: #2acdc1;
+    background-color: ${colors.secondary};
     display: block;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
@@ -89,9 +89,9 @@ export const button = css`
   }
 
   &:hover .bottom {
-    left: 0;
+    left: 10px;
     top: 0;
-    background-color: #f3f3f3;
+    background-color: ${colors.light};
   }
 
   &:hover .top .label {
