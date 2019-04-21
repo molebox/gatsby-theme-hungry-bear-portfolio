@@ -4,10 +4,11 @@ import {css} from '@emotion/core';
 
 interface BoxProps {
     noBackground?: boolean;
+    noBorder?: boolean;
     children: React.ReactNode;
 }
 
-export const Box = ({children, noBackground}: BoxProps) => (
+export const Box = ({children, noBackground, noBorder}: BoxProps) => (
     <div css={css`
     position: relative;
     height: 100%;
@@ -28,7 +29,7 @@ export const Box = ({children, noBackground}: BoxProps) => (
         top: 0;
         height: 100%;
         padding: 24px 34px 22px 34px;
-        border: 2px solid ${colors.primary};
+        border: 2px ${noBorder ? 'none' : 'solid'} ${colors.primary};
       }`}>
         <div className="bottom"/>
         <div className="top">

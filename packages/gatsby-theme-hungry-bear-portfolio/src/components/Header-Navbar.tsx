@@ -1,16 +1,19 @@
 import * as React from 'react';
 import { Button } from './Button';
 import { Title } from './Title';
+import * as styles from './Layout.module.css';
 
 export default () => {
     return(
-        <div style={{
-                display: 'flex',
-                justifyContent: 'flex-end'
-                }}>
-            <Button text="About" onClick={() => console.log()}/>
-            <Button text="Blog" onClick={() => console.log()}/>
-            <Button text="Contact" onClick={() => console.log()}/>
-        </div>       
+        <div className={styles.headerNavbar}>
+            <div className={styles.spreadHorizontal}>
+                <Title>hungry bear studio</Title>
+            </div>
+            <div className={styles.buttons}>
+                <Button text="about" onClick={() => console.log()}/>
+                <Button text="blog" onClick={() => console.log()}/>
+                <Button text="contact" onClick={() => console.log()}/>
+            </div>      
+        </div> 
     )
 }

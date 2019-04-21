@@ -55,10 +55,10 @@ export const button = css`
     height: 100%;
     background-color: ${colors.secondary};
     display: block;
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    -o-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
+    -webkit-transition: all 0.20s ease-out;
+    -moz-transition: all 0.20s ease-out;
+    -o-transition: all 0.20s ease-out;
+    transition: all 0.20s ease-out;
   }
 
   & .top {
@@ -70,14 +70,14 @@ export const button = css`
   }
 
   & .top .label {
-    font-family: sans-serif;
+    font-family: Montserrat;
     font-weight: 600;
     color: ${colors.primary};
     font-size: 12px;
     line-height: 110%;
     letter-spacing: 2px;
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
     -o-transition: all 0.15s ease-out;

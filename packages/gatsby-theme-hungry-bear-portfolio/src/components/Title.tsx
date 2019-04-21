@@ -1,15 +1,26 @@
 import * as React from 'react';
-import styled from '@emotion/styled';
 import colors from '../extendable/colors';
+import {css} from '@emotion/core';
 
-export const Title = styled.h1`
-    font-family: sans-serif;
-    font-weight: 600;
-    line-height: 110%;
-    letter-spacing: 2px;
-    margin: 0 0 12px 0;
-    padding: 0;
-    color: ${colors.primary};
-`;
+interface TitleProps {
+    fontSize?: string;
+    fontWeight?: string;
+    children: React.ReactNode;
+}
 
-export default ({children}) => <Title>{children}</Title>;
+// TODO: ADD JSDOCS
+export const Title = ({fontSize, fontWeight, children}: TitleProps) => (
+    <div css={
+        css`
+        font-family: Montserrat;
+        font-weight: ${fontWeight ? fontWeight : '300'};
+        line-height: 110%;
+        font-size: ${fontSize ? fontSize : '3rem'};
+        letter-spacing: 2px;
+        margin: 0 0 12px 0;
+        padding: 0;
+        color: ${colors.primary};
+    `}>
+        {children}
+    </div>
+);

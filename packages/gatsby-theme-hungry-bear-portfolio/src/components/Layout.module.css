@@ -1,8 +1,12 @@
-* {
+*,
+*::before,
+*::after { 
   box-sizing: border-box;
 }
-body { /* ADDED */
+
+body {
   margin: 0;
+  overflow: hidden;
 }
 
 .gridContainer {
@@ -21,8 +25,28 @@ body { /* ADDED */
   
   .headerNavbar { 
       grid-area: headerNavbar; 
-
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "title title buttons";
+      width: 100%;
     }
+
+  .title {
+    grid-area: title;
+  }
+
+  .spreadHorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons {
+    grid-area: buttons;
+    display: flex;
+    margin-inline-end: 3rem;
+  }
   
   .hero { 
     grid-area: hero; 
@@ -32,6 +56,16 @@ body { /* ADDED */
   .content { 
     grid-area: content; 
 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   
   .footer { 

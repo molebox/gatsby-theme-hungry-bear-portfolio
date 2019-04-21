@@ -24,10 +24,14 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "gatsby-image": "^2.0.39",
     "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-page-creator": "^2.0.12",
+    "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-transformer-sharp": "^2.1.18",
     "typescript": "^3.4.3"
   }
 }

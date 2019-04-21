@@ -4,8 +4,11 @@ import { Title } from '../components/Title';
 
 export default () => {
     return(
-        <Box noBackground>
-            <Title>Im the content!</Title>
-        </Box>
+        <div>
+            <Box noBackground>
+                <Title>i am content!</Title>
+            </Box>
+        </div>
+
     )
 }

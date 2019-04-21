@@ -37,7 +37,10 @@ export default ({data}: IndexPageProps) => {
         <div className={styles.hero}>
             <Hero/>
         </div>
-        <div className={styles.content}>
+        <div className={[styles.content, styles.spreadHorizontal].join(' ')}>
+            <Content/>
+            <Content/>
+            <Content/>
             <Content/>
         </div>
         <div className={styles.footer}>
