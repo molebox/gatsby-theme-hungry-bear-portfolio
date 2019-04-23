@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {css} from '@emotion/core';
 import colors from '../extendable/colors';
+import { useBreakPoint } from '../utils/Utilities';
 
 export const buttonBorderLeft = css`
   left: -2px;
@@ -135,7 +136,19 @@ interface ButtonProps {
 }
 
 export const Button = ({text, onClick}: ButtonProps) => (
-  <div style={{display: 'flex', margin: '1.5rem'}}>
+
+  <div
+    css={{
+    display: 'flex',
+    margin: '1.5rem',
+    [useBreakPoint('medium')]: {
+      height: '40%'
+      },
+    // [useBreakPoint('large')]: {
+    //     height: '100%'
+    //   }
+    }}
+  >
     <a onClick={onClick} css={button}>
         <div className="bottom"/>
         <div className="top">
