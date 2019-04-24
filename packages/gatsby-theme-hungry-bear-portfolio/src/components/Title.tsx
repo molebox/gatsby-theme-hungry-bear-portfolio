@@ -20,6 +20,10 @@ export const Title = ({fontSize, fontWeight, children}: TitleProps) => (
         margin: 0 0 12px 0;
         padding: 0;
         color: ${colors.primary};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        word-wrap: break-word;
     `}>
         {children}
     </div>

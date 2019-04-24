@@ -32,6 +32,7 @@
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-sharp": "^2.1.18",
+    "react-spring": "^8.0.19",
     "typescript": "^3.4.3"
   }
 }

@@ -144,8 +144,9 @@ export const Button = ({text, onClick}: ButtonProps) => (
     [useBreakPoint('medium')]: {
       height: '40%'
       },
-    // [useBreakPoint('large')]: {
-    //     height: '100%'
+    // [useBreakPoint('largeMobile')]: {
+    //     width: '5rem',
+    //     // height: '100%'
     //   }
     }}
   >

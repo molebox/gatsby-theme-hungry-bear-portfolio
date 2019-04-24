@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Box } from './Box';
 import { Title } from '../components/Title';
+import colors from '../extendable/colors';
 
 export default () => {
     return(
-        <Box noBackground noBorder>
+        <Box color={colors.secondary}>
           <div style={{
             display: 'flex',
             justifyContent: 'center',

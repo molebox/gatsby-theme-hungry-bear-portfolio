@@ -3,7 +3,9 @@ module.exports = {
        { 
            resolve: 'gatsby-theme-hungry-bear-portfolio',
             options: {
-                test: 'This is from the users config'
+                title: 'Hungry Bear Gatsby Theme',
+                description: 'The is a description of the wesbite',
+                author: 'Hungry Bear Studio'
             }
         }
     ],
