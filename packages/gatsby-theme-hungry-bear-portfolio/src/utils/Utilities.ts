@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby'
 import breakpoints from '../extendable/breakpoints';
 
 /**
@@ -22,4 +23,24 @@ export function useBreakPoint(breakpoint: string) {
     }, [breakpoint]);
 
     return bp;
+}
+
+/**
+ * Hook to provide the site meta data
+ */
+export function useSiteMetadata() {
+  const { site } = useStaticQuery(
+    graphql`
+      query SITE_METADATA_QUERY {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  );
+  return site.siteMetadata;
 }

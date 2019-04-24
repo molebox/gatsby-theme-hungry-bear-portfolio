@@ -1,11 +1,15 @@
 const path = require("path")
 
 module.exports = (options) => {
-  const {test} = options;
+
+  // Passed in from the consuming gatsby site
+  const {title, description, author} = options;
 
   return {
     siteMetadata: {
-      test: test
+      title,
+      description,
+      author
     },
     plugins: [
       {
