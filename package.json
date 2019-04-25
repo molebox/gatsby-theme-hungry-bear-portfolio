@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "gatsby-theme-hungry-bear-portfolio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Gatsby portfolio theme",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,9 @@
     "build": "gatsby build",
     "clean": "gatsby clean"
   },
-  "keywords": ["gatsby-theme"],
+  "keywords": [
+    "gatsby-theme"
+  ],
   "author": "Hungry Bear Studio <roar@hungrybearstudio.com> (hungrybearstudio.com)",
   "license": "ISC",
   "workspaces": [
