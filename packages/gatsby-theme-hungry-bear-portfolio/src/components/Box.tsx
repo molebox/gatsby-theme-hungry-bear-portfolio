@@ -22,7 +22,7 @@ export const Box = ({children, noBackground, noBorder, color, animate}: BoxProps
             css={css`
                 position: relative;
                 height: 100%;
-        
+
                 & .bottom {
                     position: absolute;
                     left: 4px;
@@ -32,7 +32,7 @@ export const Box = ({children, noBackground, noBorder, color, animate}: BoxProps
                     background-color: ${noBackground ? 'none' : color ? color : undefined};
                     display: block;
                 }
-        
+
                 & .top {
                     position: relative;
                     left: 10px;
@@ -41,48 +41,47 @@ export const Box = ({children, noBackground, noBorder, color, animate}: BoxProps
                     padding: 24px 34px 22px 34px;
                     border: 2px ${noBorder ? 'none' : 'solid'} ${colors.primary};
             }`}
-        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-        onMouseLeave={() => set({ xys: [0, 0, 1] })}
-        style={{ transform: props.xys.interpolate(trans) }}
+            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+            onMouseLeave={() => set({ xys: [0, 0, 1] })}
+            style={{ transform: props.xys.interpolate(trans) }}
         >
         <div className="bottom"/>
-        <div className="top">
-            {children}
+            <div className="top">
+                {children}
         </div>
         </animated.div>
-       )
+       );
     } else {
         return (
             <div
-            css={css`
-            position: relative;
-            height: 100%;
-    
-            & .bottom {
-                position: absolute;
-                left: 4px;
-                top: 7px;
-                width: 100%;
-                height: 100%;
-                background-color: ${noBackground ? 'none' : color ? color : undefined};
-                display: block;
-            }
-    
-            & .top {
+                css={css`
                 position: relative;
-                left: 10px;
-                top: 0;
                 height: 100%;
-                padding: 24px 34px 22px 34px;
-                border: 2px ${noBorder ? 'none' : 'solid'} ${colors.primary};
-            }`}
-        >
+
+                & .bottom {
+                    position: absolute;
+                    left: 4px;
+                    top: 7px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: ${noBackground ? 'none' : color ? color : undefined};
+                    display: block;
+                }
+
+                & .top {
+                    position: relative;
+                    left: 10px;
+                    top: 0;
+                    height: 100%;
+                    padding: 24px 34px 22px 34px;
+                    border: 2px ${noBorder ? 'none' : 'solid'} ${colors.primary};
+                }`}
+            >
             <div className="bottom"/>
-            <div className="top">
-                {children}
+                <div className="top">
+                    {children}
+                </div>
             </div>
-        </div>
-        )
+        );
     }
-}
-    
+};

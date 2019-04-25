@@ -12,10 +12,10 @@ export default () => {
                 <Title>{title}</Title>
             </div>
             <div className={styles.buttons}>
-                <Button text="about" onClick={() => console.log()}/>
-                <Button text="blog" onClick={() => console.log()}/>
-                <Button text="contact" onClick={() => console.log()}/>
-            </div>      
-        </div> 
-    )
-}
+                <Button text="we" onClick={() => console.log()}/>
+                <Button text="are" onClick={() => console.log()}/>
+                <Button text="buttons" onClick={() => console.log()}/>
+            </div>
+        </div>
+    );
+};

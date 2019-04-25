@@ -40,13 +40,16 @@ export default () => {
         </div>
         <div className={[styles.content, styles.spreadHorizontal].join(' ')}>
             <Box noBackground noBorder>
-                <Title>i am box! but i have no border</Title>
+                <Title>im a box! but i have no border</Title>
             </Box>
             <Box noBackground animate>
-                <Title>i am box! and i am animated</Title>
+                <Title>im a box! and i am animated</Title>
             </Box>
-            <Box color={colors.light}>
-                <Title>i am box! i have a background color</Title>
+            <Box color={colors.secondary}>
+                <Title>im a box! i have a background color</Title>
+            </Box>
+            <Box>
+                <Title>im a normal box</Title>
             </Box>
             {/* <Content/>
             <Content/>

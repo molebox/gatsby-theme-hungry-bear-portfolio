@@ -5,13 +5,15 @@ import colors from '../extendable/colors';
 
 export default () => {
     return(
-        <Box color={colors.secondary}>
-          <div style={{
+        <Box>
+          <div 
+            style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             height: '100%',
-          }}>
+          }}
+          >
             <Title fontWeight="300">
              im the footer
             </Title>

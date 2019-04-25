@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  // overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .gridContainer {
@@ -69,36 +69,79 @@ body {
 /* Large screen */
 @media only screen and (max-width: 1200px) {
    
+  .headerNavbar { 
+    grid-area: headerNavbar; 
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    grid-template-areas: 
+    "title"
+    "title"
+    "buttons";
+  }
 }
  
 /* Medium screen, Desktop */
 @media only screen and (max-width: 992px) {
    
+  .headerNavbar { 
+    grid-area: headerNavbar; 
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    grid-template-areas: 
+    "title"
+    "title"
+    "buttons";
+  }
+
+  .buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
  
 /* Medium screen Laptop */
 @media only screen and (max-width: 768px) {
    
+  .headerNavbar { 
+    grid-area: headerNavbar; 
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    grid-template-areas: 
+    "title"
+    "buttons";
+  }
+
+  .buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
  
 /* Mobile */
 @media only screen and (max-width: 480px) {
 
-  /* .gridContainer {
-    grid-template-areas: 
-    ". headerNavbar" 
-    ". hero" 
-    ". content" 
-    ". footer";
-  } */
-
   .headerNavbar { 
     grid-area: headerNavbar; 
-    margin: 1rem;
-
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    margin: 1.5rem;
 
     grid-template-areas: 
     "title"

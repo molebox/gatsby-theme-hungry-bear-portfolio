@@ -1,6 +1,7 @@
 import * as React from 'react';
 import colors from '../extendable/colors';
 import {css} from '@emotion/core';
+import { useBreakPoint } from '../utils/Utilities';
 
 interface TitleProps {
     fontSize?: string;
@@ -10,7 +11,8 @@ interface TitleProps {
 
 // TODO: ADD JSDOCS
 export const Title = ({fontSize, fontWeight, children}: TitleProps) => (
-    <div css={
+    <div
+        css={
         css`
         font-family: Montserrat;
         font-weight: ${fontWeight ? fontWeight : '300'};
@@ -24,7 +26,8 @@ export const Title = ({fontSize, fontWeight, children}: TitleProps) => (
         align-items: center;
         justify-content: center;
         word-wrap: break-word;
-    `}>
+        `}
+    >
         {children}
     </div>
 );
