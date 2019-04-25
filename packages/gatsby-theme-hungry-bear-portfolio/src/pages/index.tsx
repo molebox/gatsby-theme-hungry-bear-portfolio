@@ -8,26 +8,6 @@ import { Box } from './../components/Box';
 import { Title } from './../components/Title';
 import colors from '../extendable/colors';
 
-// interface IndexPageProps {
-//     data: {
-//         site: {
-//            siteMetadata: {
-//                 test: string
-//            }
-//         }
-//     };
-//   }
-
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//       site {
-//         siteMetadata {
-//             test
-//         }
-//       }
-//   }
-// `;
-
 export default () => {
 
     return (
