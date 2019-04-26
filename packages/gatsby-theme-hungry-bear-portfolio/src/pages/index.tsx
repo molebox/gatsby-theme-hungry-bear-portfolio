@@ -6,11 +6,13 @@ import Footer from '../components/Footer';
 import { Box } from './../components/Box';
 import { Title } from './../components/Title';
 import colors from '../extendable/colors';
+import SEO from '../components/SEO';
 
 export default () => {
 
     return (
       <div className={styles.gridContainer}>
+        <SEO/>
         <div className={styles.headerNavbar}>
             <HeaderNavbar/>
         </div>

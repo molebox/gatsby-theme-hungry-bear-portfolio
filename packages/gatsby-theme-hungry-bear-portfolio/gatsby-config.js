@@ -3,15 +3,18 @@ const path = require("path")
 module.exports = (options) => {
 
   // Passed in from the consuming gatsby site
-  const {title, description, author} = options;
+  const {title, description, author, url, twitterUsername} = options;
 
   return {
     siteMetadata: {
       title,
       description,
-      author
+      author,
+      url,
+      twitterUsername
     },
     plugins: [
+      "gatsby-plugin-react-helmet",
       {
         resolve: "gatsby-plugin-page-creator",
         options: {
@@ -37,8 +40,7 @@ module.exports = (options) => {
       "gatsby-plugin-tslint",
       "gatsby-plugin-emotion",
       "gatsby-transformer-sharp",
-      "gatsby-plugin-sharp",
-      "gatsby-plugin-react-helmet"
+      "gatsby-plugin-sharp"
     ]
   }
 }
