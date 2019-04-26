@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {css} from '@emotion/core';
+/** @jsx jsx */
+import {css, jsx} from '@emotion/core';
 import colors from '../extendable/colors';
 import { useBreakPoint } from '../utils/Utilities';
 
@@ -66,14 +67,16 @@ export const Button = ({text, onClick}: ButtonProps) => (
       },
     }}
   >
-    <a 
-      onClick={onClick} 
+    <button
+      onClick={onClick}
       css={css`
         display: inline-block;
         text-decoration: none;
         position: relative;
+        background-color: Transparent;
         border: none;
-        outline: none;
+        cursor:pointer;
+        outline:none;
 
         & .bottom {
           position: absolute;
@@ -155,6 +158,6 @@ export const Button = ({text, onClick}: ButtonProps) => (
             <div css={[buttonBorder, buttonBorderRight]}/>
             <div css={[buttonBorder, buttonBorderBottom]}/>
         </div>
-    </a>
+    </button>
   </div>
 );

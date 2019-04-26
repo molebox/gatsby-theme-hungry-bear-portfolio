@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as styles from '../components/Layout.module.css';
 import HeaderNavbar from '../components/Header-Navbar';
 import Hero from '../components/Hero';
-import Content from '../components/Content';
 import Footer from '../components/Footer';
 import { Box } from './../components/Box';
 import { Title } from './../components/Title';
@@ -31,14 +30,10 @@ export default () => {
             <Box>
                 <Title>im a normal box</Title>
             </Box>
-            {/* <Content/>
-            <Content/>
-            <Content/>
-            <Content/> */}
         </div>
         <div className={styles.footer}>
             <Footer/>
         </div>
       </div>
    );
-}
+};

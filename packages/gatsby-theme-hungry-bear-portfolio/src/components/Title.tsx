@@ -1,7 +1,6 @@
 import * as React from 'react';
 import colors from '../extendable/colors';
 import {css} from '@emotion/core';
-import { useBreakPoint } from '../utils/Utilities';
 
 interface TitleProps {
     fontSize?: string;
