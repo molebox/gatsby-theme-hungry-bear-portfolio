@@ -37,7 +37,8 @@ module.exports = (options) => {
       "gatsby-plugin-tslint",
       "gatsby-plugin-emotion",
       "gatsby-transformer-sharp",
-      "gatsby-plugin-sharp"
+      "gatsby-plugin-sharp",
+      "gatsby-plugin-react-helmet"
     ]
   }
 }
