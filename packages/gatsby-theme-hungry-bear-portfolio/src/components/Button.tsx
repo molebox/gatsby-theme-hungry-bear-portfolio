@@ -153,10 +153,70 @@ export const Button = ({text, onClick}: ButtonProps) => (
         <div className="bottom"/>
         <div className="top">
             <div className="label">{text}</div>
-            <div css={[buttonBorder, buttonBorderLeft]}/>
-            <div css={[buttonBorder, buttonBorderTop]}/>
-            <div css={[buttonBorder, buttonBorderRight]}/>
-            <div css={[buttonBorder, buttonBorderBottom]}/>
+            <div
+              css={css`
+              position: absolute;
+              background-color: ${colors.primary};
+              -webkit-transition: all .25s ease-out;
+              -moz-transition: all .25s ease-out;
+              -o-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+
+              left: -2px;
+              bottom: -2px;
+              width: 2px;
+              height: 0;
+            `}
+            />
+            <div
+              css={css`
+              position: absolute;
+              background-color: ${colors.primary};
+              -webkit-transition: all .25s ease-out;
+              -moz-transition: all .25s ease-out;
+              -o-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+
+              left: -2px;
+              top: -2px;
+              width: 0;
+              height: 2px;
+            `}
+            />
+            <div
+              css={css`
+              position: absolute;
+              background-color: ${colors.primary};
+              -webkit-transition: all .25s ease-out;
+              -moz-transition: all .25s ease-out;
+              -o-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+
+              right: -2px;
+              top: -2px;
+              width: 2px;
+              height: 0;
+            `}
+            />
+            <div
+              css={css`
+              position: absolute;
+              background-color: ${colors.primary};
+              -webkit-transition: all .25s ease-out;
+              -moz-transition: all .25s ease-out;
+              -o-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+
+              right: -2px;
+              bottom: -2px;
+              width: 0;
+              height: 2px;
+            `}
+            />
+            {/* <div css={[buttonBorder, buttonBorderLeft]}/> */}
+            {/* <div css={[buttonBorder, buttonBorderTop]}/> */}
+            {/* <div css={[buttonBorder, buttonBorderRight]}/> */}
+            {/* <div css={[buttonBorder, buttonBorderBottom]}/> */}
         </div>
     </button>
   </div>

@@ -3,14 +3,13 @@ const path = require("path")
 module.exports = (options) => {
 
   // Passed in from the consuming gatsby site
-  const {title, description, author, url, twitterUsername} = options;
+  const {title, description, author, twitterUsername} = options;
 
   return {
     siteMetadata: {
       title,
       description,
       author,
-      url,
       twitterUsername
     },
     plugins: [

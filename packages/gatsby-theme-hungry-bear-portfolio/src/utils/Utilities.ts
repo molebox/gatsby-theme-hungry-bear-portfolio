@@ -37,7 +37,8 @@ export function useSiteMetadata() {
           siteMetadata {
             title
             description
-            author
+            author,
+            twitterUsername
           }
         }
       }

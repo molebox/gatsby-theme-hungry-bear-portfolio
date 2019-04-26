@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('D:/HUNGRY BEAR STUDIO/GATSBY-THEMES/gatsby-theme-hungry-bear-portfolio/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('D:/HUNGRY BEAR STUDIO/GATSBY-THEMES/gatsby-theme-hungry-bear-portfolio/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["Montserrat","source sans pro:300,400,400i,700"]},
     }]

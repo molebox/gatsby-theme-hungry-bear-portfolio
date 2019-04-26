@@ -5,7 +5,8 @@ module.exports = {
             options: {
                 title: 'Hungry Bear Gatsby Theme',
                 description: 'The is a description of the wesbite',
-                author: 'Hungry Bear Studio'
+                author: 'Hungry Bear Studio',
+                twitterUsername: '@studio_hungry'
             }
         }
     ],
