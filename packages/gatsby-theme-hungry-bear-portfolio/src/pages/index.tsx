@@ -7,6 +7,7 @@ import { Box } from './../components/Box';
 import { Title } from './../components/Title';
 import colors from '../extendable/colors';
 import SEO from '../components/SEO';
+import { Button } from './../components/Button';
 
 export default () => {
 
@@ -30,7 +31,8 @@ export default () => {
                 <Title>im a box! i have a background color</Title>
             </Box>
             <Box>
-                <Title>im a normal box</Title>
+                <Title>im a normal box with a button</Title>
+                <Button text="hi" onClick={() => console.log()}/>
             </Box>
         </div>
         <div className={styles.footer}>
